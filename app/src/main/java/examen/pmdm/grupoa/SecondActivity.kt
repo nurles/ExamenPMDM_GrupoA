@@ -12,7 +12,7 @@ class SecondActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        val editText = findViewById<EditText>(R.id.editTextSecondActivity)
+        val editText2 = findViewById<EditText>(R.id.editTextSecondActivity)
         val textView = findViewById<TextView>(R.id.textViewSecondActivity)
         val button1 = findViewById<Button>(R.id.button1)
         val button2 = findViewById<Button>(R.id.button2)
@@ -38,25 +38,25 @@ class SecondActivity : AppCompatActivity(){
 
         button3.setOnClickListener {
             texto?.let {
-                textView.text = filtrarPorTamano(it, editText.text.toString().toInt())
+                textView.text = filtrarPorTamano(it, editText2.text.toString().toInt())
             }
         }
     }
 
     private fun filtrarPorTamano(texto: String, valorFiltrado: Int) : String {
         val lista = texto.split(" ")
-        lista.filter{
+        val listaFiltrada = lista.filter{
             it.length >= valorFiltrado
         }
-        return lista.toString()
+        return listaFiltrada.toString()
     }
 
     private fun ordenarPorTamano(texto: String) : String{
         val lista = texto.split(" ")
-        lista.sortedByDescending {
+        val listaOrdenada = lista.sortedByDescending {
             it.length
         }
-        return lista.toString()
+        return listaOrdenada.toString()
     }
 
     private fun darTamano(texto : String) : String {

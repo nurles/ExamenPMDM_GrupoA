@@ -14,18 +14,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var editText = findViewById<EditText>(R.id.editText)
+        val editText = findViewById<EditText>(R.id.editText)
         val button = findViewById<Button>(R.id.button)
 
         editText.movementMethod = ScrollingMovementMethod()
 
         editText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                TODO("Not yet implemented")
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                TODO("Not yet implemented")
             }
 
             override fun afterTextChanged(s: Editable?) {
@@ -42,8 +40,8 @@ class MainActivity : AppCompatActivity() {
 
         button.setOnClickListener{
             val text = editText.text
-            val intent = Intent()
-            intent.putExtra("Hola", text)
+            val intent = Intent(this, SecondActivity::class.java)
+            intent.putExtra("Hola", text.toString())
             startActivity(intent)
         }
     }
