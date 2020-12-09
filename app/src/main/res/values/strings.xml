@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ExamenPMDM_GrupoA</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="dar_tama_o">Dar Tamaño</string>
+    <string name="ordenar_por_tama_o">Ordenar por Tamaño</string>
+    <string name="filtrar_por_tama_o">Filtrar por Tamaño</string>
+</resources>
