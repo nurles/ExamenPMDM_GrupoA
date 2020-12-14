@@ -8,6 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 
 class SecondActivity : AppCompatActivity(){
 
+    companion object{
+        const val PARAM1 = "Hola"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
@@ -18,7 +22,7 @@ class SecondActivity : AppCompatActivity(){
         val button2 = findViewById<Button>(R.id.button2)
         val button3 = findViewById<Button>(R.id.button3)
 
-        val texto = intent.getStringExtra("Hola")
+        val texto = intent.getStringExtra(PARAM1)
 
         texto?.let {
             textView.text = it.replace(" ", "\n")

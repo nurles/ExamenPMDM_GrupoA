@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener{
             val text = editText.text
             val intent = Intent(this, SecondActivity::class.java)
-            intent.putExtra("Hola", text.toString())
+            intent.putExtra(SecondActivity.PARAM1, text.toString())
             startActivity(intent)
         }
     }
